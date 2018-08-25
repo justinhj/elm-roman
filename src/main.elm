@@ -59,6 +59,20 @@ displayDecimal d =
 
 
 
+-- Same as above for Roman Numerals
+
+
+displayRoman : String -> String
+displayRoman r =
+    case r of
+        "0" ->
+            ""
+
+        n ->
+            n
+
+
+
 -- UPDATE
 
 
@@ -101,9 +115,9 @@ view updatedModel =
     { title = "Roman Numeral Converter in Elm"
     , body =
         [ div [ class "container" ]
-            [ h2 [] [ text "Roman Numeral Converters" ]
+            [ h2 [] [ text "Roman Numeral <-> Decimal" ]
             , label [] [ text "Roman numeral" ]
-            , input [ placeholder "Enter Roman numeral", onInput ChangeRoman, value updatedModel.roman ] []
+            , input [ placeholder "Enter Roman numeral", onInput ChangeRoman, value (displayRoman updatedModel.roman) ] []
             , label [] [ text "Decimal number" ]
             , input [ placeholder "Enter number", onInput ChangeDecimal, value (displayDecimal updatedModel.decimal) ] []
             , div [ class "container" ]
