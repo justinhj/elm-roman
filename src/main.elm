@@ -7,6 +7,10 @@ import Html.Events exposing (..)
 import RomanConvert exposing (decimalToRoman, romanNumeralsToDecimal)
 
 
+
+-- Convert between roman numerals and decimals
+
+
 main =
     Browser.document
         { init = init
@@ -94,7 +98,7 @@ update msg updatedModel =
 
 view : Model -> Browser.Document Msg
 view updatedModel =
-    { title = "Roman title"
+    { title = "Roman Numeral Converter in Elm"
     , body =
         [ div [ class "container" ]
             [ h2 [] [ text "Roman Numeral Converters" ]
@@ -104,8 +108,8 @@ view updatedModel =
             , input [ placeholder "Enter number", onInput ChangeDecimal, value (displayDecimal updatedModel.decimal) ] []
             , div [ class "container" ]
                 [ text "See the source code on github "
-                , a [ href "http://github.com/justinhj/cljs-roman" ]
-                    [ text "github.com/justinhj/cljs-roman" ]
+                , a [ href "http://github.com/justinhj/elm-roman" ]
+                    [ text "github.com/justinhj/elm-roman" ]
                 ]
             ]
         ]
