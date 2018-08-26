@@ -115,8 +115,8 @@ view updatedModel =
     { title = "Roman Numeral Converter in Elm"
     , body =
         [ div [ class "container" ]
-            [ h2 [] [ text "Roman Numeral to decimal converter" ] ]
-        , Html.form [ class "form-inline" ]
+            [ h3 [] [ text "Roman Numeral to decimal converter" ] ]
+        , div [ class "form-inline" ]
             [ div [ class "form-group" ]
                 [ div [ class "pull-left" ]
                     [ input [ placeholder "Enter Roman numeral", onInput ChangeRoman, value (displayRoman updatedModel.roman) ] []
