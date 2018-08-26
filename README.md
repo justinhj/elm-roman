@@ -4,8 +4,8 @@ A simple elm lang application to convert roman numerals to decimals and vice ver
 
 I've previously implemented this in clojurescript and scala.js:
 
-(https://github.com/justinhj/cljs-roman)[https://github.com/justinhj/cljs-roman]
-(https://bitbucket.org/justinhj/udashroman)[https://bitbucket.org/justinhj/udashroman]
+[https://github.com/justinhj/cljs-roman](https://github.com/justinhj/cljs-roman)
+[https://bitbucket.org/justinhj/udashroman](https://bitbucket.org/justinhj/udashroman)
 
 # Building
 
