@@ -67,17 +67,6 @@ romanNumeralsToDecimal input =
     folded
 
 
-
--- folded s =
---     String.foldl
---         (\b acc ->
---             acc + Maybe.withDefault 0 (Dict.get b vm)
---         )
---         0
---         s
--- pairUp, below, uses this function as a recursive helper to do its work
-
-
 pairUpHelper : a -> List a -> List ( a, a ) -> List ( a, a )
 pairUpHelper default n acc =
     case n of
