@@ -112,21 +112,28 @@ update msg updatedModel =
 
 view : Model -> Browser.Document Msg
 view updatedModel =
-    { title = "Roman Numeral Converter in Elmy"
+    { title = "Roman Numeral Converter in Elm"
     , body =
         [ div [ class "container" ]
             [ h2 [] [ text "Roman Numeral to decimal converter" ] ]
         , Html.form [ class "form-inline" ]
             [ div [ class "form-group" ]
-                [ input [ placeholder "Enter Roman numeral", onInput ChangeRoman, value (displayRoman updatedModel.roman) ] []
-                , br
-                , label [ for "romaninput" ]
-                    [ text "Roman Numeral" ]
+                [ div [ class "pull-left" ]
+                    [ input [ placeholder "Enter Roman numeral", onInput ChangeRoman, value (displayRoman updatedModel.roman) ] []
+                    , br [] []
+                    , label [ for "romaninput", class "text-left" ]
+                        [ text "Roman Numeral" ]
+                    ]
                 ]
+            , div [ attribute "style" "margin-left: 10px; margin-right: 10px; margin-top: 5px" ] [ text "=" ]
+            , span [ class "align-top" ] [ text "top" ]
             , div [ class "form-group" ]
-                [ label [ for "decimalinput" ]
-                    [ text "Decimal" ]
-                , input [ placeholder "Enter number", onInput ChangeDecimal, value (displayDecimal updatedModel.decimal) ] []
+                [ div [ class "pull-left" ]
+                    [ input [ placeholder "Enter number", onInput ChangeDecimal, value (displayDecimal updatedModel.decimal) ] []
+                    , br [] []
+                    , label [ for "decimalinput" ]
+                        [ text "Decimal" ]
+                    ]
                 ]
             ]
         , div [ class "container" ]
