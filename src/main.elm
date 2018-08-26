@@ -118,9 +118,10 @@ view updatedModel =
             [ h2 [] [ text "Roman Numeral to decimal converter" ] ]
         , Html.form [ class "form-inline" ]
             [ div [ class "form-group" ]
-                [ label [ for "romaninput" ]
+                [ input [ placeholder "Enter Roman numeral", onInput ChangeRoman, value (displayRoman updatedModel.roman) ] []
+                , br
+                , label [ for "romaninput" ]
                     [ text "Roman Numeral" ]
-                , input [ placeholder "Enter Roman numeral", onInput ChangeRoman, value (displayRoman updatedModel.roman) ] []
                 ]
             , div [ class "form-group" ]
                 [ label [ for "decimalinput" ]
